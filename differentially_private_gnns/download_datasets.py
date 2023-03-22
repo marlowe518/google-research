@@ -26,6 +26,7 @@ import ogb
 import ogb.utils.url
 import pandas as pd
 import requests
+FLAGS = flags.FLAGS
 
 _DATASET_NAME = flags.DEFINE_string(
     'dataset_name', 'ogbn-arxiv', help='Name of the dataset to load.')
@@ -92,8 +93,10 @@ def download_reddit_dataset(root):
 def main(unused_argv):
   del unused_argv  # Unused.
 
-  name = _DATASET_NAME.value
-  root = _DATASET_ROOT.value
+  #name = _DATASET_NAME.value
+  #root = _DATASET_ROOT.value
+  name = FLAGS.dataset_name
+  root = FLAGS.dataset_root
 
   if name.startswith('ogb'):
     download_ogb_dataset(name, root)

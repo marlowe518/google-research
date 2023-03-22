@@ -34,6 +34,9 @@ import ml_collections
 import numpy as np
 import optax
 
+import sys
+sys.path.append('../')
+
 from differentially_private_gnns import input_pipeline
 from differentially_private_gnns import models
 from differentially_private_gnns import normalizations

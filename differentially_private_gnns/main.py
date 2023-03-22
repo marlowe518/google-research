@@ -23,7 +23,8 @@ from clu import platform
 import jax
 from ml_collections import config_flags
 import tensorflow as tf
-
+import sys
+sys.path.append("../")
 from differentially_private_gnns import train
 
 
